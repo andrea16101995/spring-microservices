@@ -1,0 +1,8 @@
+server:
+  port: 8080
+numberGeneratorUrl: http://numbergenerator
+opertorGeneratorUrl: http://opgenerator
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
