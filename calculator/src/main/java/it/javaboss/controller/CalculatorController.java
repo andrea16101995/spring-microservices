@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.javaboss.controller.bean.Solution;
 import it.javaboss.service.NumberGeneratorService;
-import it.javaboss.service.OperatorGeneraatorService;
+import it.javaboss.service.OperatorGeneratorService;
 
 @RefreshScope
 @RestController
@@ -21,7 +21,7 @@ public class CalculatorController {
 	private static Logger logger = LoggerFactory.getLogger( CalculatorController.class );
 	
 	@Autowired
-	OperatorGeneraatorService operatorGeneraatorService;
+	OperatorGeneratorService operatorGeneratorService;
 	
 	@Autowired
 	NumberGeneratorService numberGeneratorService;
@@ -33,7 +33,7 @@ public class CalculatorController {
 		
 		logger.info( "Calling services to get data" );
 		
-		String expression = numberGeneratorService.getNumber() + " " + operatorGeneraatorService.getOperator() + " " + numberGeneratorService.getNumber();
+		String expression = numberGeneratorService.getNumber() + " " + operatorGeneratorService.getOperator() + " " + numberGeneratorService.getNumber();
 		
 		logger.info( "Parsing exp: " + expression );
 		
