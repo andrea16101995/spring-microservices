@@ -9,7 +9,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>api-gateway</name>
+	<name>service-registry</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
