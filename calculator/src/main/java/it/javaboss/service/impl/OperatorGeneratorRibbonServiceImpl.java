@@ -9,14 +9,16 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import it.javaboss.AndConditionProfile;
 import it.javaboss.controller.bean.RandomOperator;
-import it.javaboss.service.OperatorGeneraatorService;
+import it.javaboss.service.OperatorGeneratorService;
 
 @Service
-@Profile({"!eureka","!ribbon"})
+@Profile("ribbon")
 @Conditional(AndConditionProfile.class)
-public class OperatorGeneraatorServiceImpl implements OperatorGeneraatorService {
+public class OperatorGeneratorRibbonServiceImpl implements OperatorGeneratorService {
 	
 	@Value("${opertorGeneratorUrl}")
 	String opertorGeneratorUrl;
@@ -29,7 +31,12 @@ public class OperatorGeneraatorServiceImpl implements OperatorGeneraatorService 
 		System.out.println(this.getClass().getName() + " active!!!");
 	}
 
+	@HystrixCommand( fallbackMethod = "reliableOperator" )
 	public String getOperator() {
 		return rest.getForEntity(opertorGeneratorUrl, RandomOperator.class).getBody().getValue();
+	}
+	
+	public String reliableOperator() {
+		return "+";
 	}
 }

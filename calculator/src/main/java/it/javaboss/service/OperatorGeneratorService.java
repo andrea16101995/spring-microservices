@@ -1,6 +1,6 @@
 package it.javaboss.service;
 
-public interface OperatorGeneraatorService {
+public interface OperatorGeneratorService {
 	
 	public String getOperator();
 }
