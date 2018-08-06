@@ -16,3 +16,9 @@ A set of microservices where calculator app invokes the numbergenerator and opge
 <p align="center">
 <img src="http://www.javaboss.it/wp-content/uploads/2018/05/caltulator-microservice.png" width="300">
 </p>
+
+## Profilea
+In the project are defined several profile keyword:
+- eureka: to use eureka service registry;
+- ribbon: to use ribbon as client sode load balancer;
+- [empty]: in case o no profile keyword provided the URL to the services are taken from the config file.
