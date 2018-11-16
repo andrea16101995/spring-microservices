@@ -22,3 +22,8 @@ In the project are defined several profile keyword:
 - eureka: to use eureka service registry;
 - ribbon: to use ribbon as client sode load balancer;
 - [empty]: in case o no profile keyword provided the URL to the services are taken from the config file.
+
+## Blog
+For a description of the project in italian pleas refer to theese articles:
+
+http://www.javaboss.it/microservizi/
