@@ -27,7 +27,11 @@ In the project are defined several profile keyword:
 For a description of the project in italian pleas refer to theese articles:
 
 http://www.javaboss.it/microservizi/
+
 http://www.javaboss.it/spring-cloud-config/
+
 http://www.javaboss.it/spring-security-debugging/
+
 http://www.javaboss.it/eureka-service-registry/
+
 http://www.javaboss.it/ribbon-client-side-load-balancer/
